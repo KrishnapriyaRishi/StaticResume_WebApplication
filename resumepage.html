@@ -1,0 +1,131 @@
+{%extends 'base.html' %} {%block title%}<title>Resume</title>{%endblock%}
+{%block link%}
+<link rel="stylesheet" href="/static/css/resumepage.css" /> {%endblock%}
+ {%block content%}
+<div class="resume_main">
+  <div class="heading">
+    <h2>{{name}}</h2>
+    <em>{{role}}</em>
+    <span>{%if gender == 'female'%}
+      <img class="image" src="/static/images/women.png" alt="Women image">
+      {%elif gender == 'male'%}
+      <img class="image" src="/static/images/men.png" alt="Women image">
+      {%endif%}
+    </span>
+    <p>{%for i in contact%} 
+      <span>{{i}}</span>&nbsp;<span>|</span>
+      {%endfor%}
+    </p>
+    <p>
+      {%for i in social_site%} 
+        {%if i == 'GitHub' %}
+        <span><a href="https://github.com/KrishnapriyaRishi" class="social">{{i}}</a></span>
+        {%elif i == 'LinkedIn' %}
+        &nbsp;<span>|</span>&nbsp;<span><a href="https://www.linkedin.com/in/krishnapriyaam" class="social">{{i}}</a></span>
+        {%endif%}
+      {%endfor%}
+      </p>
+  </div>
+  <div class="summary">
+    <h3>PROFESSIONAL SUMMARY</h3>
+    <hr class="custom-line">
+    <p>{{summary}}</p>
+  </div>
+  <div class="education">
+    <h3>EDUCATION</h3>
+    <hr class="custom-line">
+    <p><ul>{%for i in education%} 
+      <li class="no_style_list"><strong>{{i}}</strong></li>
+      {%endfor%}
+    </ul></p>
+  </div>
+  <div class="certifications">
+    <h3>CERTIFICATIONS</h3>
+    <hr class="custom-line">
+    <p><ul>{%for i in certifications%} 
+      <li class="no_style_list"><strong>{{i}}</strong></li>
+      {%endfor%}
+    </ul></p>
+    <p>
+      <ul class="gained_values">{%for i in gained_val%} 
+      <li><em>{{i}}</em></li>
+      {%endfor%}
+    </ul></p>
+    </p>
+
+  </div>
+  <div class="projects">
+    <h3>PROJECTS</h3>
+    <hr class="custom-line">
+    <p><ul>{%for i in project1%} 
+        {%if i == 'Restaurant Menu Management System (CLI-Based)'%}
+          <li class="no_style_list"><strong>{{i}}</strong></li>
+        {%else%}
+          <li class="no_style_list">{{i}}</li>
+        {%endif%}
+      {%endfor%}
+    </ul>
+  
+    <p>
+      <ul class="gained_values">{%for i in project1_desc%} 
+      <li><em>{{i}}</em></li>
+      {%endfor%}
+    </ul></p>
+  </p>
+
+  </div>
+  <div class="skills">
+    <h3>SKILLS</h3>
+    <hr class="custom-line">
+    <p><ul>{%for i in technical_skills%} 
+      <li class="no_style_list"><strong>{{i}}</strong>&nbsp;:&nbsp;
+      {%if i == 'Programming Language'%}
+        {%for k in ProgrammingLanguage%}
+        <span> <em>{{k}}&nbsp;</em></span><span>&nbsp;,</span>
+        {%endfor%}
+      {%elif i == 'Web Technologies'%}
+        {%for k in WebTechnologies%}
+        <span><em>{{k}}&nbsp;</em></span><span>&nbsp;,</span>
+        {%endfor%}
+      {%elif i == 'Web Frameworks'%}
+        {%for k in WebFrameworks%}
+        <span><em>{{k}}&nbsp;</em></span><span>&nbsp;,</span>
+        {%endfor%}
+      {%elif i == 'Database'%}
+        {%for k in Database%}
+        <span><em>{{k}}&nbsp;</em></span><span>&nbsp;,</span>
+        {%endfor%}
+      {%endif%}
+      </li>
+      {%endfor%}
+    </ul></p>
+  </div>
+  <div class="experience">
+    <h3>PROFESSIONAL EXPERIENCE</h3>
+    <hr class="custom-line">
+    <div class="exp">
+    <div class="exp1">
+      <strong>{{work_experience1}}</strong>
+      <p>
+        <ul class="gained_values">{%for i in work_role1%} 
+      <li><em>{{i}}</em></li>
+      {%endfor%}
+    </ul></p>
+      
+    </div>
+    <div class="exp2">
+      <strong>{{work_experience2}}</strong>
+      <p>
+        <ul class="gained_values">{%for i in work_role2%} 
+      <li><em>{{i}}</em></li>
+      {%endfor%}
+    </ul></p>
+    </div>
+    </div>
+
+  </div>
+  
+  
+</div>
+
+{%endblock%}

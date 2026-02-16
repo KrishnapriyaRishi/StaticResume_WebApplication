@@ -1,0 +1,26 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.header {
+  position: fixed; /* Fixes the header to the viewport */
+  top: 0; /* Positions it at the top of the viewport */
+  left: 0; /* Positions it at the left of the viewport */
+  width: 100%;
+  min-height: 50px;
+  background-color: firebrick;
+  color: bisque;
+  z-index: 1000;
+}
+.head {
+  padding: 15px;
+}
+.main {
+  margin: 5px;
+  margin-top: 70px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}

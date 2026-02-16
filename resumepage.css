@@ -1,0 +1,70 @@
+body{
+	background-color: bisque;
+}
+h2,h3{
+	color: firebrick;
+	
+}
+ hr.custom-line {
+      height: 1px; 
+      background-color: firebrick; 
+      border: none; 
+    }
+.resume_main{
+
+	width: 80%;
+	min-height: 700px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	border: 2px solid brown;
+	margin: 5px;
+	padding: 20px;
+	
+}
+.heading{
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	font-size: 18px;
+	text-align: center;
+}
+.image{
+	width: 100px;
+	height: 100px;
+	padding: 5px;
+	border-radius: 50px;
+	border:2px solid transparent;
+	background-color: rgb(171, 62, 62);
+}
+.image:hover{
+	border: 2px solid rgb(205, 181, 152);
+	transform: scale(1.2);
+}
+.social{
+	text-decoration: none;
+	color: black;
+}
+.social:hover{
+	color: firebrick;
+	font-size: large;
+}
+.summary,.education,.certifications,.projects,.skills,.experience{
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
+.no_style_list{
+	list-style: none;
+}
+.gained_values{
+	padding-left: 50px;
+}
+.exp{
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}

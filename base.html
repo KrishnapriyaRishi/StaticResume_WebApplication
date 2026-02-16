@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %} {% endblock %}
+    <link rel="stylesheet" href="/static/css/base.css" />
+    {%block link%} {%endblock%}
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <ul>
+          <li><h1 class="head">Resume</h1></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="main">{%block content%} {%endblock%}</div>
+  </body>
+</html>
